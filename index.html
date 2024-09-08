@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e8f6f3;
+            background-color: #d0f0f4; /* Light turquoise background */
             color: #333;
             margin: 0;
             padding: 0;
@@ -20,12 +20,13 @@
         }
         
         .sidebar {
-            background-color: #2c7873;
+            background-color: #009688; /* Turquoise color */
             color: white;
             padding: 20px;
             width: 40%;
             overflow-y: auto;
             animation: slideInLeft 1s ease-out;
+            position: relative;
         }
         
         .content {
@@ -38,42 +39,21 @@
             animation: fadeIn 2s ease-in;
         }
         
-        h1, h2, h3 {
-            color: #2c7873;
-            animation: textPop 1s ease-in-out;
+        .sidebar h1 {
+            font-size: 3em;
+            margin-top: 0;
         }
         
-        a {
+        .sidebar h2 {
             color: #ffffff;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: color 0.3s ease-in-out;
         }
         
-        a::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 0;
-            bottom: 0;
-            left: 0;
-            background-color: #ffffff;
-            visibility: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        
-        a:hover::before {
-            visibility: visible;
-            height: 100%;
-        }
-        
-        a:hover {
-            color: #2c7873;
+        .sidebar p, .sidebar ul {
+            color: #ffffff;
         }
         
         .query-form {
-            background-color: #2c7873;
+            background-color: #009688; /* Turquoise color */
             padding: 20px;
             border-radius: 10px;
             width: 100%;
@@ -101,7 +81,7 @@
         
         .query-form input[type="submit"] {
             background-color: white;
-            color: #2c7873;
+            color: #009688; /* Turquoise color */
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -112,7 +92,7 @@
         }
         
         .query-form input[type="submit"]:hover {
-            background-color: #e8f6f3;
+            background-color: #b2dfdb; /* Light turquoise */
         }
         
         @keyframes slideInLeft {
@@ -176,6 +156,10 @@
                 transform: scale(1);
             }
         }
+        
+        .content h2 {
+            color: #009688; /* Turquoise color */
+        }
     </style>
 </head>
 <body>
@@ -184,31 +168,40 @@
         <div class="sidebar">
             <h1>Pradeep Bhatta</h1>
             <h2>Introduction</h2>
-            <p>I'm Pradeep Bhatta, a passionate coder with a love for problem-solving and creating innovative solutions. My journey in programming started in grade 8 with Qbasic, and since then, I've mastered Python, explored various fields like economics and engineering, and interned as a software developer at Yarsa Tech.</p>
-            
-            <h2>Projects</h2>
-            <ul>
-                <li>Tic Tac Toe with AI using Minimax Algorithm</li>
-                <li>Simple Bash Scripts for Automation</li>
-                <li>SEO and Social Media Management for Local Businesses</li>
-            </ul>
+            <p>Aspiring computer engineer with a passion for coding, a strong analytical mindset, and a drive for entrepreneurship. Currently gaining hands-on experience in software development and AI to build innovative tech solutions.</p>
             
             <h2>Education</h2>
-            <p>High School Graduate, BNKS, Nepal</p>
-            
-            <h2>Skills</h2>
+            <p>A-Levels<br>
+            Budhanilkantha School<br>
+            2022 – 2024</p>
             <ul>
-                <li>Python (Intermediate)</li>
-                <li>Bash Scripting</li>
-                <li>SQL (Basic)</li>
-                <li>SEO & Social Media Management</li>
+                <li>Treasurer at BNKS Scout Club</li>
+                <li>Content Manager of School Magazine (BNKS Chronicles)</li>
             </ul>
             
-            <h2>Goals</h2>
-            <p>To become a computer engineer, understand the corporate world, and eventually build startups focused on solving contemporary challenges in the tech world.</p>
+            <h2>Professional Experience</h2>
+            <p><strong>Software Development Intern</strong><br>
+            Yarsa Tech<br>
+            07/2024 – present<br>
+            Working as a Software Developer Intern at Yarsa Tech, contributing to software testing, debugging, and project management.</p>
             
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:bhattapradeep425@gmail.com">bhattapradeep425@gmail.com</a></p>
+            <p><strong>Social Media Manager</strong><br>
+            Mushoor<br>
+            07/2021 – 10/2021<br>
+            Managed website and social media for Mushoor, significantly increasing their visitors and traffic.</p>
+            
+            <h2>Leadership and Organizations</h2>
+            <p><strong>Scout Club BNKS</strong><br>
+            Treasurer<br>
+            2023 – 2024<br>
+            • Led scout orientations, scout activities, and various scout games.<br>
+            • Managed Club's finance and records and secured sponsorship for the club.</p>
+            
+            <p><strong>Maths and STR Club BNKS</strong><br>
+            Program Coordinator<br>
+            2023 – 2024<br>
+            • Conducted inter-school chess competitions, math quizzes, cross country, and math relay.<br>
+            • Organized a VR and planetarium showcasing session for the entire school of 1200 students.</p>
         </div>
 
         <div class="content">
@@ -227,4 +220,3 @@
 
 </body>
 </html>
-
