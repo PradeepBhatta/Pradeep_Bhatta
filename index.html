@@ -4,98 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pradeep Bhatta - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f6f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            background-color: #2c7873;
+            color: white;
+            padding: 20px;
+            width: 40%;
+            overflow-y: auto;
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 2s ease-in;
+        }
+        
+        h1, h2, h3 {
+            color: #2c7873;
+            animation: textPop 1s ease-in-out;
+        }
+        
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        a:hover::before {
+            visibility: visible;
+            height: 100%;
+        }
+        
+        a:hover {
+            color: #2c7873;
+        }
+        
+        .query-form {
+            background-color: #2c7873;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            animation: slideUp 1.5s ease-out;
+        }
+        
+        .query-form h2 {
+            color: white;
+        }
+        
+        .query-form label {
+            color: white;
+        }
+        
+        .query-form input[type="text"], .query-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            animation: inputFocus 2s infinite alternate;
+        }
+        
+        .query-form input[type="submit"] {
+            background-color: white;
+            color: #2c7873;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out;
+            animation: pulse 2s infinite;
+        }
+        
+        .query-form input[type="submit"]:hover {
+            background-color: #e8f6f3;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes textPop {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes inputFocus {
+            from {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+            }
+            to {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <div class="sidebar">
             <h1>Pradeep Bhatta</h1>
-            <p>Email: <a href="mailto:bhattapradeep425@gmail.com">bhattapradeep425@gmail.com</a></p>
-            <p>Location: Dhangadhi-5, Kailali, Nepal</p>
-            <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
-
-            <h2>Profile</h2>
-            <p>Aspiring computer engineer with a passion for coding, a strong analytical mindset, and a drive for entrepreneurship. Currently gaining hands-on experience in software development and AI to build innovative tech solutions.</p>
-
-            <h2>Education</h2>
-            <h3>A-Levels</h3>
-            <p>Budhanilkantha School | 2022 – 2024</p>
-            <ul>
-                <li>Treasurer at BNKS Scout Club</li>
-                <li>Content Manager of School Magazine (BNKS Chronicles)</li>
-            </ul>
-
-            <h2>Professional Experience</h2>
-            <h3>Software Development Intern</h3>
-            <p>Yarsa Tech | 07/2024 – present</p>
-            <p>Contributing to software testing, debugging, and project management.</p>
-
-            <h3>Social Media Manager</h3>
-            <p>Mushoor | 07/2021 – 10/2021</p>
-            <p>Managed website and social media, significantly increasing their visitors and traffic.</p>
-
-            <h2>Leadership and Organizations</h2>
-            <h3>Scout Club BNKS</h3>
-            <p>Treasurer | 2023 – 2024</p>
-            <ul>
-                <li>Led scout orientations, activities, and games.</li>
-                <li>Managed Club's finance and brought sponsorship for the club.</li>
-            </ul>
-
-            <h3>Maths and STR Club BNKS</h3>
-            <p>Program Coordinator | 2023 – 2024</p>
-            <ul>
-                <li>Conducted Inter school chess competition, math quizzes, cross country, and math relay.</li>
-                <li>Organized a VR and planetarium session for 1200 students.</li>
-            </ul>
-
-            <h2>Languages</h2>
-            <p>Nepali, English, Hindi</p>
-
+            <h2>Introduction</h2>
+            <p>I'm Pradeep Bhatta, a passionate coder with a love for problem-solving and creating innovative solutions. My journey in programming started in grade 8 with Qbasic, and since then, I've mastered Python, explored various fields like economics and engineering, and interned as a software developer at Yarsa Tech.</p>
+            
             <h2>Projects</h2>
-            <h3>Machine Learning Model for Nepali Character Classification</h3>
-            <p>Model that correctly classifies the 46 Nepali characters, trained using 92000 images.</p>
-
-            <h3>Document Scanner</h3>
-            <p>OpenCV project that scans documents and produces a scanned image.</p>
-
-            <h3>Tic Tac Toe Game</h3>
-            <p>Multiplayer and AI versions of Tic Tac Toe using the minimax algorithm and Pygame.</p>
-
-            <h3>Space Shooter Game</h3>
-            <p>Simple space shooter game with endless rounds using Pygame.</p>
-
-            <h3>Snake Game</h3>
-            <p>Simple snake game using Pygame.</p>
-
-            <h3>Pong Game</h3>
-            <p>Singleplayer game using Pygame.</p>
-
+            <ul>
+                <li>Tic Tac Toe with AI using Minimax Algorithm</li>
+                <li>Simple Bash Scripts for Automation</li>
+                <li>SEO and Social Media Management for Local Businesses</li>
+            </ul>
+            
+            <h2>Education</h2>
+            <p>High School Graduate, BNKS, Nepal</p>
+            
             <h2>Skills</h2>
-            <p>Python, C, SQL, Git, Docker, Bash (UNIX Shell), ETL, Cybersecurity (NIST Framework), TCP/IP</p>
-
-            <h2>Courses And Certifications</h2>
-            <h3>Python with Everybody (I / II)</h3>
-            <p>Coursera | Basic Python syntax, control flow, iteration, data structures.</p>
-
-            <h3>Google Cyber Security Professional Certificate (I / II)</h3>
-            <p>Coursera | Cybersecurity tools, SQL, types of cyberattacks, managing risk, SIEM, SOAR.</p>
-
-            <h3>Hands-on Introduction to Linux Command and Shell Scripting</h3>
-            <p>Coursera | Basic Linux command, Shell scripting, automated system for password backup.</p>
+            <ul>
+                <li>Python (Intermediate)</li>
+                <li>Bash Scripting</li>
+                <li>SQL (Basic)</li>
+                <li>SEO & Social Media Management</li>
+            </ul>
+            
+            <h2>Goals</h2>
+            <p>To become a computer engineer, understand the corporate world, and eventually build startups focused on solving contemporary challenges in the tech world.</p>
+            
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:bhattapradeep425@gmail.com">bhattapradeep425@gmail.com</a></p>
         </div>
+
         <div class="content">
-            <div class="query-form">
+            <form class="query-form" action="https://formsubmit.co/bhattapradeep425@gmail.com" method="POST">
                 <h2>Contact Me</h2>
-                <form action="mailto:bhattapradeep425@gmail.com" method="post" enctype="text/plain">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-                    <input type="submit" value="Send">
-                </form>
-            </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <input type="submit" value="Send">
+            </form>
         </div>
     </div>
+
 </body>
 </html>
+
