@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,76 +14,171 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
             line-height: 1.6;
         }
 
         header {
-            background-color: #007acc;
+            background-color: #495057;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         header nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: white;
-            font-weight: bold;
+            color: #dee2e6;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f8f9fa;
         }
 
         section {
-            padding: 40px 20px;
-            max-width: 800px;
+            padding: 60px 20px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #007acc;
+            color: #495057;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
         }
 
         p {
             text-align: center;
             margin-bottom: 20px;
+            font-size: 1.1rem;
         }
 
         .card {
-            background-color: #f4f4f4;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         footer {
-            background-color: #007acc;
+            background-color: #495057;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
 
         /* Add animations */
-        h1 {
-            animation: fadeInDown 2s ease;
+        h1,
+        h2,
+        .card,
+        p {
+            animation: fadeIn 1.5s ease forwards;
+            opacity: 0;
         }
 
-        @keyframes fadeInDown {
+        h1 {
+            animation-delay: 0.5s;
+        }
+
+        h2 {
+            animation-delay: 1s;
+        }
+
+        p {
+            animation-delay: 1.5s;
+        }
+
+        .card {
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 40px auto;
+            animation: fadeIn 2s ease forwards;
+            opacity: 0;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+            color: #495057;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #495057;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #343a40;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -94,6 +190,7 @@
             <a href="#experience">Experience</a>
             <a href="#activities">Activities</a>
             <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -121,9 +218,9 @@
 
     <section id="social-media">
         <h2>Social Media</h2>
-        <ul style="text-align: center; list-style: none;">
-            <li><a href="https://linkedin.com/in/yourusername">LinkedIn</a></li>
-            <li><a href="https://github.com/yourusername">GitHub</a></li>
+        <ul style="text-align: center; list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px;"><a href="https://linkedin.com/in/yourusername" style="text-decoration: none; color: #007bff;">LinkedIn</a></li>
+            <li><a href="https://github.com/yourusername" style="text-decoration: none; color: #007bff;">GitHub</a></li>
         </ul>
     </section>
 
@@ -147,8 +244,21 @@
         <p>Your personal statement and future aspirations.</p>
     </section>
 
+    <section id="contact">
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="mailto:bhatta.pradeep425@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
