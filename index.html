@@ -6,8 +6,7 @@
     <title>Pradeep Bhatta - Portfolio</title>
     <!-- Link to TailwindCSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Link to Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Hero Section with Parallax Background -->
@@ -27,6 +26,44 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-900 fade-in">
+        <div class="container mx-auto px-10 text-center">
+            <h2 class="text-3xl font-semibold mb-5">Education</h2>
+            <div class="grid grid-cols-1 gap-10">
+                <div>
+                    <h3 class="text-xl font-bold">A-Levels</h3>
+                    <p>Budhanilkantha School (2022–2024)</p>
+                    <p>Studied Physics, Chemistry, Mathematics, Computer Science, and English Language.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 fade-in">
+        <div class="container mx-auto px-10 text-center">
+            <h2 class="text-3xl font-semibold mb-5">Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-gray-800 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Research Intern</h3>
+                    <p>Kathmandu Institute of Applied Science (KIAS) - 2024–Present</p>
+                    <p>Developing machine learning models for drug quality detection using Raman spectroscopy.</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Software Development Intern</h3>
+                    <p>Yarsa Tech - 2024–Present</p>
+                    <p>Contributing to software testing, debugging, and project management.</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Social Media Manager</h3>
+                    <p>Mushoor - 2021</p>
+                    <p>Managed website and social media, increasing visitors and traffic significantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="py-20 bg-gray-900 fade-in">
         <div class="container mx-auto px-10 text-center">
@@ -38,7 +75,8 @@
                 <p>Git</p>
                 <p>Docker</p>
                 <p>Linux & Shell Scripting</p>
-                <p>Cybersecurity Frameworks</p>
+                <p>NIST Frameworks</p>
+                <p>TCP/IP</p>
             </div>
         </div>
     </section>
@@ -48,15 +86,21 @@
         <div class="container mx-auto px-10 text-center">
             <h2 class="text-3xl font-semibold mb-5">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Project 1 -->
-                <div class="bg-gray-800 p-5 rounded-lg project-card">
-                    <h3 class="text-xl font-bold">Nepali Character Classification</h3>
-                    <p>ML model for classifying 46 Nepali characters, trained using 92,000 images.</p>
+                <div class="bg-gray-800 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Machine Learning Model for Nepali Character Classification</h3>
+                    <p>Developed using CNN to classify 46 Nepali characters with 92,000 images.</p>
                 </div>
-                <!-- Project 2 -->
-                <div class="bg-gray-800 p-5 rounded-lg project-card">
+                <div class="bg-gray-800 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Document Scanner</h3>
+                    <p>OpenCV project that scans documents and produces high-quality images.</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg">
                     <h3 class="text-xl font-bold">Tic Tac Toe Game</h3>
-                    <p>Multiplayer and AI versions using the minimax algorithm.</p>
+                    <p>Multiplayer and AI versions using the minimax algorithm built with Pygame.</p>
+                </div>
+                <div class="bg-gray-800 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Space Shooter Game</h3>
+                    <p>A simple space shooter game with endless rounds developed in Pygame.</p>
                 </div>
             </div>
         </div>
@@ -72,7 +116,6 @@
         </div>
     </section>
 
-    <!-- Link to Custom JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
