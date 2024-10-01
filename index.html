@@ -4,37 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pradeep Bhatta - Portfolio</title>
+    <!-- Link to TailwindCSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #1a202c;
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-        }
-        a {
-            color: #63b3ed;
-        }
-        .hover-animate:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-        .scroll {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <!-- Link to Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="scroll">
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800">
+<body>
+    <!-- Hero Section with Parallax Background -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 parallax-bg">
         <div class="text-center">
             <h1 class="text-5xl font-bold mb-5">Pradeep Bhatta</h1>
             <p class="text-xl mb-10">Aspiring Computer Engineer | Software Developer | AI Enthusiast</p>
-            <a href="#about" class="px-6 py-3 bg-blue-500 hover:bg-blue-700 rounded-full hover-animate">Learn More</a>
+            <a href="#about" class="px-6 py-3 bg-blue-500 hover:bg-blue-700 rounded-full">Learn More</a>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="py-20">
+    <section id="about" class="py-20 fade-in">
         <div class="container mx-auto px-10 text-center">
             <h2 class="text-3xl font-semibold mb-5">About Me</h2>
             <p class="text-lg">I am an aspiring computer engineer with a passion for coding, a strong analytical mindset, and a drive for entrepreneurship. Currently gaining hands-on experience in software development and AI to build innovative tech solutions.</p>
@@ -42,7 +28,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-900">
+    <section id="skills" class="py-20 bg-gray-900 fade-in">
         <div class="container mx-auto px-10 text-center">
             <h2 class="text-3xl font-semibold mb-5">Skills</h2>
             <div class="grid grid-cols-2 gap-10">
@@ -58,51 +44,35 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20">
+    <section id="projects" class="py-20 fade-in">
         <div class="container mx-auto px-10 text-center">
             <h2 class="text-3xl font-semibold mb-5">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Project 1 -->
-                <div class="bg-gray-800 p-5 rounded-lg hover-animate">
+                <div class="bg-gray-800 p-5 rounded-lg project-card">
                     <h3 class="text-xl font-bold">Nepali Character Classification</h3>
                     <p>ML model for classifying 46 Nepali characters, trained using 92,000 images.</p>
                 </div>
                 <!-- Project 2 -->
-                <div class="bg-gray-800 p-5 rounded-lg hover-animate">
+                <div class="bg-gray-800 p-5 rounded-lg project-card">
                     <h3 class="text-xl font-bold">Tic Tac Toe Game</h3>
                     <p>Multiplayer and AI versions using the minimax algorithm.</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-10 text-center">
-            <h2 class="text-3xl font-semibold mb-5">Experience</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-xl font-bold">Software Development Intern at Yarsa Tech</h3>
-                    <p>Contributed to software testing, debugging, and project management.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold">Social Media Manager at Mushoor</h3>
-                    <p>Managed website and social media, increasing visitors significantly.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 fade-in">
         <div class="container mx-auto px-10 text-center">
             <h2 class="text-3xl font-semibold mb-5">Contact</h2>
-            <p>Email: <a href="mailto:bhattapradeep425@gmail.com">bhattapradeep425@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/pradeep-bhatta-204166241">Pradeep Bhatta</a></p>
-            <p>GitHub: <a href="https://github.com/PradeepBhatta">PradeepBhatta</a></p>
+            <p>Email: <a href="mailto:bhattapradeep425@gmail.com" class="text-blue-500">bhattapradeep425@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/pradeep-bhatta-204166241" class="text-blue-500">Pradeep Bhatta</a></p>
+            <p>GitHub: <a href="https://github.com/PradeepBhatta" class="text-blue-500">PradeepBhatta</a></p>
         </div>
     </section>
 
+    <!-- Link to Custom JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
