@@ -1,67 +1,67 @@
-/* Global Styles */
-body {
-    background-color: #121212;
-    color: #f5f5f5;
-    font-family: 'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Bhatta - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section with Parallax Background -->
+    <section class="min-h-screen flex items-center justify-center bg-fixed bg-cover parallax-bg">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-5 text-white">Pradeep Bhatta</h1>
+            <p class="text-xl mb-10 text-gray-300">Aspiring Computer Engineer | Software Developer | AI Enthusiast</p>
+            <a href="#about" class="px-6 py-3 bg-blue-500 hover:bg-blue-700 rounded-full text-white">Learn More</a>
+        </div>
+    </section>
 
-/* Heading styles */
-h1, h2, h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    color: #e2e8f0;
-}
+    <!-- About Section -->
+    <section id="about" class="py-20 fade-in bg-gray-900 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-5">About Me</h2>
+            <p>I am an aspiring computer engineer with a passion for coding, a strong analytical mindset, and a drive for entrepreneurship.</p>
+        </div>
+    </section>
 
-/* Link styles */
-a {
-    color: #63b3ed;
-    transition: color 0.3s ease;
-}
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800 fade-in text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-5">Skills</h2>
+            <div class="grid grid-cols-2 gap-10">
+                <p>Python</p><p>SQL</p><p>C</p><p>Git</p>
+                <p>Docker</p><p>Linux</p><p>TCP/IP</p><p>AI/ML</p>
+            </div>
+        </div>
+    </section>
 
-a:hover {
-    color: #4299e1;
-}
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900 fade-in text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-5">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Project 1</h3>
+                    <p>Machine Learning Model for Nepali Character Classification.</p>
+                </div>
+                <div class="bg-gray-700 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold">Project 2</h3>
+                    <p>Document Scanner using OpenCV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 fade-in text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-5">Contact</h2>
+            <p>Email: <a href="mailto:bhattapradeep425@gmail.com" class="text-blue-500">bhattapradeep425@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/pradeep-bhatta-204166241" class="text-blue-500">Pradeep Bhatta</a></p>
+        </div>
+    </section>
 
-.fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Parallax background styling for hero section */
-.parallax-bg {
-    background-image: url('../assets/your-image.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-/* Hover animation for project cards */
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Button styling */
-button {
-    background-color: #3182ce;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #2b6cb0;
-}
+    <script src="main.js"></script>
+</body>
+</html>
