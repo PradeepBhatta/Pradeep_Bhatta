@@ -1,6 +1,6 @@
 body {
-    background-color: #121212;
-    color: #f5f5f5;
+    background-color: #6a0dad; /* Purple background */
+    color: #ffffff; /* White text */
     font-family: 'Inter', sans-serif;
 }
 
@@ -20,4 +20,21 @@ body {
 .fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.bg-purple-600 {
+    background-color: #6a0dad;
+}
+
+.text-white {
+    color: white;
+}
+
+a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ddd;
 }
