@@ -202,7 +202,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../images/about/welcome-banner.webp)no-repeat;
+    background:url(../images/about/welcome-banner.JPG)no-repeat;
     background-size:cover;
     background-position: center;
     height:890px;
@@ -212,7 +212,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     content: " ";
     top:0;
     left:0;
-    background:rgba(31,44,108,.65);
+    background:rgba(219, 175, 114, 0.5);
     width:100%;
     height:100%;
 }
@@ -700,64 +700,75 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 
+
 /*-------------------------------------
         10. Clients
 --------------------------------------*/
+.clients {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f9fbfd; /* Light background */
+}
+
 .clients-area {
-    padding: 50px 0;
-}
-
-.owl-carousel .item {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 10px; /* Spacing between items */
+    justify-content: center;
+    flex-direction: column; /* Ensure the nav buttons are placed below */
 }
 
-.owl-carousel .item img {
+.clients-area .item {
+    padding: 0 25px;
+}
+
+.clients-area .owl-carousel .owl-item img {
+    display: block;
     width: 100%;
-    max-width: 200px; /* Limit max width of each image */
     height: auto;
-    border-radius: 15px; /* Optional: add a slight curve to the images */
-    transition: transform 0.3s ease-in-out;
+    border-radius: 15px; /* Curved corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
 }
 
-.owl-carousel .item img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+.clients-area .owl-carousel .owl-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-.owl-theme .owl-controls .owl-nav {
-    margin-top: 10px;
+.clients-area .owl-nav {
+    margin-top: 20px;
+    text-align: center;
 }
 
-.owl-theme .owl-controls .owl-nav [class*='owl-'] {
-    color: #333;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #f2f2f2;
-    border-radius: 3px;
+.clients-area .owl-nav button {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #502D0E; /* Arrow color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0 10px; /* Space between the buttons */
 }
 
-.owl-theme .owl-controls .owl-nav [class*='owl-']:hover {
-    background: #ddd;
-    color: #777;
+.clients-area .owl-nav button:hover {
+    color: #b636ff; /* Color change on hover */
 }
 
-.owl-carousel.owl-theme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.clients-area .owl-nav button.owl-prev::before {
+    content: '\f104'; /* Left arrow from FontAwesome */
+    font-family: FontAwesome;
 }
 
-.owl-carousel .owl-stage {
-    display: flex;
+.clients-area .owl-nav button.owl-next::before {
+    content: '\f105'; /* Right arrow from FontAwesome */
+    font-family: FontAwesome;
 }
 
-.owl-carousel .owl-stage .owl-item {
-    flex: 1 0 auto;
-    max-width: 25%; /* Four items at a time */
+/* Ensure buttons remain below and centered */
+.clients-area .owl-nav {
+    position: relative;
+    bottom: 0; /* Ensures the nav buttons are below the carousel */
 }
+
 
 /*-------------------------------------
         11. Contact
