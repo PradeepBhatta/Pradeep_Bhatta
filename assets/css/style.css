@@ -1,3 +1,14 @@
+/*==================================
+* Author        : "ThemeSine"
+* Template Name :  Browny  HTML Template
+* Version       : 1.0
+==================================== */
+
+/*==================================
+font-family: 'Poppins', sans-serif;
+==================================== */
+
+
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
 2.  Header
@@ -112,76 +123,126 @@ html, body {
 /*-------------------------------------
         2. Header
 --------------------------------------*/
+/* Header - Adjusted for Lehigh University Style */
 .top-area {
     position: relative;
     z-index: 9999;
 }
-@media (min-width: 1024px){}
+
+/* Navbar Styling */
 nav.navbar.bootsnav.no-background {
     background-color: #fff;
     border: none;
 }
 
 nav.navbar.bootsnav {
-    background-color: #fff;
-    border-bottom: transparent;
-    box-shadow: 0 3px 15px rgba(0,0,0,.2);
+    background-color: #ffffff;
+    border-bottom: none;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Increased padding to make navbar taller */
 }
 
-/*.navbar-brand*/
-.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
-    display: inline-block;
+/* Navbar Brand (Logo and Text) - Centered with Navigation Links */
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Align logo and text inline, centered vertically */
+.navbar-header a.navbar-brand {
+    display: flex;
+    align-items: center;
     color: #502D0E;
     font-size: 20px;
     font-weight: 600;
-    padding: 33px 0px 57px;
     text-transform: uppercase;
+    padding: 20px 0; /* Increased padding to match increased navbar height */
 }
-/*.navbar-brand*/
 
-/*.nav li*/
+/* Logo Image Styling */
+.nav-logo {
+    height: 40px; /* Adjust logo height as needed */
+    width: auto;
+    margin-right: 8px; /* Adds space between logo and brand text */
+    vertical-align: middle;
+}
+
+/* Navbar Links - Aligned with Logo */
+nav.navbar.bootsnav ul.nav {
+    display: flex;
+    align-items: center; /* Centers the links vertically with the logo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual Link Styling */
+nav.navbar.bootsnav ul.nav > li {
+    list-style: none;
+}
+
 nav.navbar.bootsnav ul.nav > li > a {
     font-size: 16px;
     font-weight: 400;
-    text-transform:uppercase;
-    -webkit-transition: 0.3s linear; 
-    -moz-transition: 0.3s linear; 
-    -ms-transition: 0.3s linear; 
-    -o-transition: 0.3s linear; 
-    transition: 0.3s linear;
+    color: #444;
+    padding: 25px 20px; /* Increased padding to match increased navbar height */
+    text-transform: uppercase;
+    transition: color 0.3s;
 }
-nav.navbar.bootsnav ul.nav > li > a {padding: 35px 20px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #d92cf9;}
 
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:focus,
+nav.navbar.bootsnav ul.nav > li.active > a {
+    color: #9b5d1e; /* Subtle hover color */
+}
+
+/* Sticky Navbar - Consistent Colors */
+.sticky-wrapper.is-sticky nav.navbar.bootsnav {
+    background-color: #ffffff;
+    color: #444;
+}
+
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {
+    color: #444;
+}
+
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active > a {
+    color: #9b5d1e;
+}
+
+/* Dropdown Menu Styling */
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
     content: "";
+    border: none;
 }
-nav.navbar.bootsnav ul.nav > li.dropdown span {
-    font-size: 8px;
-    margin-left: 15px;
+
+nav.navbar.bootsnav ul.nav > li.dropdown > ul.dropdown-menu {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Minimal shadow for dropdowns */
 }
-.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {color:#502D0E;}
-.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #d92cf9;}
-/*.nav li*/
 
+/* Scrollable Menu UI Design */
+.menu-ui-design {
+    overflow-y: scroll;
+    height: 350px;
+}
 
-
-/*.menu-ui-design*/
-.menu-ui-design{overflow-y:scroll;height: 350px;}
 .menu-ui-design::-webkit-scrollbar {
-    width:5px;
+    width: 5px;
 }
+
 .menu-ui-design::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 8px #000;
 }
+
 .menu-ui-design::-webkit-scrollbar-thumb {
-  background-color: #ffe41e;
+    background-color: #ffe41e;
 }
-/*.menu-ui-design*/
 
-
-
-/*.navbar-toggle */
+/* Navbar Toggle for Mobile */
 nav.navbar.bootsnav .navbar-toggle {
     position: relative;
     background-color: transparent;
@@ -189,10 +250,10 @@ nav.navbar.bootsnav .navbar-toggle {
     padding: 10px;
     top: 0;
 }
-nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
-/*.navbar-toggle */
 
-
+nav.navbar.bootsnav .navbar-toggle i {
+    color: #ffe41e;
+}
 
 /*-------------------------------------
         3.  Welcome-hero
@@ -212,7 +273,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     content: " ";
     top:0;
     left:0;
-    background:rgba(219, 175, 114, 0.5);
+    background:rgba(219, 175, 114, 0.4);
     width:100%;
     height:100%;
 }
@@ -225,7 +286,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     text-transform: uppercase;
     line-height: 1.5;
 }
-.header-text h2 span {color: #d92cf9;}
+.header-text h2 span {color: #502D0E;}
 .header-text p {
     color: #fff;
     font-size: 20px;
@@ -250,17 +311,23 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.header-text a:hover{ box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#9f00ff;border: 1px solid #9f00ff;}
+.header-text a:hover{ box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#502D0E;border: 1px solid #502D0E;}
 /*.header-text-area*/
 
 /*-------------------------------------
         4.  About
 --------------------------------------*/
-.about {padding: 50px 0 100px;}
-.about-content {padding-top: 100px;}
-/*.single-about-txt*/
+/* About Section */
+.about {
+    padding: 50px 0 100px;
+}
+.about-content {
+    padding-top: 100px;
+}
+
+/* About Text */
 .single-about-txt h3 {
-    font-size:18px;
+    font-size: 18px;
     color: #3c4258;
     text-transform: initial;
     line-height: 1.8;
@@ -279,25 +346,47 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     font-size: 16px;
     text-transform: capitalize;
 }
-.single-about-add-info p {font-weight:  300;border:  0;padding: 0;margin-top: 3px;}
-/*.single-about-txt*/
+.single-about-add-info p {
+    font-weight: 300;
+    border: 0;
+    padding: 0;
+    margin-top: 3px;
+}
 
-/*.single-about-img */
-.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);}
-.single-about-img:before {
-    position:  absolute;
-    content: " ";
+/* Updated Image Container */
+.single-about-img {
+    position: relative;
+    box-shadow: 0 5px 20px rgba(179, 148, 63, 0.8);
+    overflow: hidden;
+    max-width: 500px; /* Keeps the box size as defined */
+    height: 468px; /* Keeps the box height as defined */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+/* White overlay for subtle lightening effect */
+.single-about-img:after {
+    content: "";
+    position: absolute;
     top: 0;
-    left:  0;
-    width: 109%;
-    height:  100%;
-    background: rgba(31,44,108,.3);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Adjust opacity for more/less whiteness */
+    pointer-events: none; /* Ensures overlay does not interfere with interaction */
 }
+
+/* Image Styling */
 .single-about-img img {
-    max-width: 500px;
-    height: 468px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image cover the entire container */
+    object-position: center; /* Centers the image within the container */
+    max-width: none; /* Ensures the image doesn’t shrink within the container */
+    filter: brightness(1.1); /* Increases brightness slightly for a whiter appearance */
 }
-.about-list-icon{
+
+/* Social Icons Section */
+.about-list-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -308,16 +397,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
     height: 90px;
     background: #1f2c6c;
 }
-/*.ab-list-icon */
 .about-list-icon ul {
     display: flex;
 }
-.about-list-icon  ul li a {
-    padding-right: 22px;
-    cursor:pointer;
-    color: #fff;
-}
 .about-list-icon ul li a {
+    padding-right: 22px;
     cursor: pointer;
     color: #fff;
     display: inline-block;
@@ -332,9 +416,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ffe41e;}
 .about-list-icon ul li a i {
     margin-left: 6px;
 }
-/*.ab-list-icon */
 
-/*.single-about-img */
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .single-about-img {
+        max-width: 100%; /* Full width on smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+        max-height: 300px; /* Limit height for smaller screens */
+    }
+}
 
 /*-------------------------------------
         5.  Education
@@ -719,6 +809,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .clients-area .item {
     padding: 0 25px;
+    text-align: center; /* Center-align the text within each item */
 }
 
 .clients-area .owl-carousel .owl-item img {
@@ -750,7 +841,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .clients-area .owl-nav button:hover {
-    color: #b636ff; /* Color change on hover */
+    color: #ffe41e /* Color change on hover */
 }
 
 .clients-area .owl-nav button.owl-prev::before {
@@ -767,6 +858,81 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .clients-area .owl-nav {
     position: relative;
     bottom: 0; /* Ensures the nav buttons are below the carousel */
+}
+
+/* Additional styling for the client names */
+.clients-area .item .client-name {
+    margin-top: 10px; /* Space between the image and the client name */
+    font-size: 16px;
+    color: #333; /* Text color for client names */
+    font-weight: 500;
+    text-align: center; /* Ensures client names are centered */
+}
+
+
+/*-------------------------------------
+        Courses and Certifications Styling
+--------------------------------------*/
+.course-item {
+    background-color: #fff;
+    border-radius: 15px; /* Curved border */
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 25px; /* Adjusted margin for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease-in-out;
+    transform: scale(0.95); /* Scale down to 0.95 of original size */
+    margin: 15px; /* Space between blocks */
+    cursor: pointer;
+}
+
+/* Hover effect for the course items */
+.course-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1); /* Slightly enlarges on hover */
+}
+
+/* Title styling */
+.course-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #502D0E;
+    padding: 15px 20px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Course details hidden initially */
+.course-details {
+    display: none;
+    font-size: 14px;
+    color: #555;
+    padding: 15px 20px;
+}
+
+/* Display course details on hover */
+.course-item:hover .course-details {
+    display: block;
+    color: #999fb3;
+}
+
+/* Add a fade-in effect for details */
+.course-details {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.course-item:hover .course-details {
+    opacity: 1;
+}
+
+/* Responsive adjustments for course items */
+@media (max-width: 768px) {
+    .course-item {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
 }
 
 
