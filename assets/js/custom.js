@@ -1,6 +1,12 @@
-$(document).ready(function(){
+$(document).ready(function() {
     "use strict";
-
+    
+    /*==================================
+    * Author        : "ThemeSine"
+    * Template Name : Khanas HTML Template
+    * Version       : 1.0
+    ==================================== */
+    
     /*=========== TABLE OF CONTENTS ===========
     1. Scroll To Top 
     2. Smooth Scroll spy
@@ -8,6 +14,8 @@ $(document).ready(function(){
     4. Owl Carousel
         - Clients Section
     5. Welcome animation support
+    6. Course Details Toggle
+    7. Navbar Shrink on Scroll
     ======================================*/
     
     // 1. Scroll To Top 
@@ -19,7 +27,7 @@ $(document).ready(function(){
         }
     });
     
-    $('.return-to-top').on('click', function(){
+    $('.return-to-top').on('click', function() {
         $('html, body').animate({
             scrollTop: 0
         }, 1500);
@@ -85,14 +93,44 @@ $(document).ready(function(){
     });
 
     // 5. Welcome animation support
-    $(window).load(function(){
+    $(window).on('load', function() {
         $(".header-text h2, .header-text p").removeClass("animated fadeInUp").css({'opacity': '0'});
         $(".header-text a").removeClass("animated fadeInDown").css({'opacity': '0'});
     });
 
-    $(window).load(function(){
+    $(window).on('load', function() {
         $(".header-text h2, .header-text p").addClass("animated fadeInUp").css({'opacity': '0'});
         $(".header-text a").addClass("animated fadeInDown").css({'opacity': '0'});
     });
 
+    // 6. Course Details Toggle
+    $('.course-header').on('click', function() {
+        var courseItem = $(this).closest('.course-item');
+        var courseDetails = courseItem.find('.course-details');
+        
+        // Toggle course details visibility
+        if (courseDetails.is(':visible')) {
+            courseDetails.slideUp(); // Collapse details with slide-up animation
+            courseItem.removeClass('expanded');
+            $(this).find('.expand-arrow').html('&darr;'); // Change arrow back to down
+        } else {
+            courseDetails.slideDown(); // Expand details with slide-down animation
+            courseItem.addClass('expanded');
+            $(this).find('.expand-arrow').html('&uarr;'); // Change arrow to up
+        }
+    });
+
+    // 7. Navbar Shrink on Scroll
+    $(window).on('scroll', function() {
+        var navbar = $('nav.navbar.bootsnav');
+        var logo = $('.nav-logo');
+        
+        if ($(this).scrollTop() > 50) { // If scrolled more than 50px
+            navbar.addClass('scrolled'); // Add the 'scrolled' class for smaller navbar
+            logo.addClass('scrolled'); // Add 'scrolled' class to reduce logo size
+        } else {
+            navbar.removeClass('scrolled'); // Remove 'scrolled' class when at the top
+            logo.removeClass('scrolled'); // Restore original logo size
+        }
+    });
 });
