@@ -84,7 +84,7 @@
 								<li class="smooth-menu"><a href="#profiles">Profile</a></li>
 								<li class="smooth-menu"><a href="#portfolio">Portfolio</a></li>
 								<li class="smooth-menu"><a href="#contact">Contact</a></li>
-								<li class="smooth-menu"><a href="#clients">Know Me More</a></li>
+								<li class="smooth-menu"><a href="#clients" class="special-button">Know Me More</a></li> <!-- Added class -->
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!--/.container-->
@@ -94,22 +94,22 @@
 		</header><!-- /.top-area-->
 		>
 	
-		<!--welcome-hero start -->
-		<section id="welcome-hero" class="welcome-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="header-text">
-							<h2>hi <span>,</span> i am <br> pradeep <br> bhatta <span>.</span>   </h2>
-							<p>Software Developer and Computer Vision enthusiast</p>
-							<a href="assets/download/Pradeep_Bhatta_CV.pdf" download>download resume</a>
-						</div><!--/.header-text-->
-					</div><!--/.col-->
-				</div><!-- /.row-->
-			</div><!-- /.container-->
+<!--welcome-hero start -->
+<section id="welcome-hero" class="welcome-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="header-text">
+                    <h2>hi <span>,</span> i am <br> pradeep <br> bhatta <span>.</span></h2>
+                    <p><span class="highlight-border">Software Developer and Computer Vision enthusiast</span></p>
+                    <a href="assets/download/Pradeep_Bhatta_CV.pdf" download>download resume</a>
+                </div><!--/.header-text-->
+            </div><!--/.col-->
+        </div><!-- /.row-->
+    </div><!-- /.container-->
+</section><!--/.welcome-hero-->
+<!--welcome-hero end -->
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
 
 		<!--about start -->
 		<section id="about" class="about">
@@ -553,114 +553,108 @@
 		</section><!--/.profiles-->
 		<!--profiles end -->
 
-<!-- Portfolio Start -->
-<section id="portfolio" class="portfolio">
-    <div class="portfolio-details">
-        <div class="section-heading text-center">
-            <h2>Portfolio</h2>
-        </div>
-        <div class="container">
-            <div class="portfolio-content">
-                <div class="isotope">
-                    <!-- First Row with 3 Items -->
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portfolio-item">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/portfolio/p1.webp" alt="Nepali Character Classification"/>
-                                    <div class="isotope-overlay">
-                                        <a href="#">Nepali Character Classification</a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Machine Learning Model for Nepali Character Classification</h3>
-                                    <p>ML model that classifies 46 Nepali characters, trained on 92,000 images.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portfolio-item">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/portfolio/p1.webp" alt="Document Scanner"/>
-                                    <div class="isotope-overlay">
-                                        <a href="#">Document Scanner</a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Document Scanner</h3>
-                                    <p>OpenCV project that scans documents and produces a clear scanned image.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portfolio-item">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/portfolio/p1.webp" alt="Tic Tac Toe Game"/>
-                                    <div class="isotope-overlay">
-                                        <a href="#">Tic Tac Toe Game</a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Tic Tac Toe Game</h3>
-                                    <p>Multiplayer and AI versions using the Minimax algorithm, built with Pygame.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+		<!-- Portfolio Start -->
+		<section id="portfolio" class="portfolio">
+			<div class="portfolio-details">
+				<div class="section-heading text-center">
+					<h2>Portfolio</h2>
+				</div>
+				<div class="container">
+					<div class="portfolio-content">
+						<div class="isotope">
+							<!-- First Row with 3 Items -->
+							<div class="row justify-content-center">
+								<div class="col-md-4 col-sm-6">
+									<div class="portfolio-item">
+										<a href="https://github.com/PradeepBhatta" target="_blank">
+											<div class="portfolio-image">
+												<img src="assets/images/portfolio/p1.webp" alt="Nepali Character Classification"/>
+											</div>
+											<div class="portfolio-text">
+												<h3>Machine Learning Model for Nepali Character Classification</h3>
+												<p>ML model that classifies 46 Nepali characters, trained on 92,000 images.</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="portfolio-item">
+										<a href="https://github.com/PradeepBhatta" target="_blank">
+											<div class="portfolio-image">
+												<img src="assets/images/portfolio/p1.webp" alt="Document Scanner"/>
+											</div>
+											<div class="portfolio-text">
+												<h3>Document Scanner</h3>
+												<p>OpenCV project that scans documents and produces a clear scanned image.</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="portfolio-item">
+										<a href="https://github.com/PradeepBhatta" target="_blank">
+											<div class="portfolio-image">
+												<img src="assets/images/portfolio/p1.webp" alt="Tic Tac Toe Game"/>
+											</div>
+											<div class="portfolio-text">
+												<h3>Tic Tac Toe Game</h3>
+												<p>Multiplayer and AI versions using the Minimax algorithm, built with Pygame.</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+		
+							<!-- Second Row with 3 Items -->
+							<div class="row justify-content-center">
+								<div class="col-md-4 col-sm-6">
+									<div class="portfolio-item">
+										<a href="https://github.com/PradeepBhatta" target="_blank">
+											<div class="portfolio-image">
+												<img src="assets/images/portfolio/p1.webp" alt="Space Shooter Game"/>
+											</div>
+											<div class="portfolio-text">
+												<h3>Space Shooter Game</h3>
+												<p>Endless space shooter game with increasing difficulty, built with Pygame.</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="portfolio-item">
+										<a href="https://github.com/PradeepBhatta" target="_blank">
+											<div class="portfolio-image">
+												<img src="assets/images/portfolio/p1.webp" alt="Snake Game"/>
+											</div>
+											<div class="portfolio-text">
+												<h3>Snake Game</h3>
+												<p>Classic snake game created using Pygame with smooth gameplay.</p>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6">
+									<div class="portfolio-item">
+										<a href="https://github.com/PradeepBhatta" target="_blank">
+											<div class="portfolio-image">
+												<img src="assets/images/portfolio/p1.webp" alt="Pong Game"/>
+											</div>
+											<div class="portfolio-text">
+												<h3>Pong Game</h3>
+												<p>Single-player version of Pong, built with Pygame, featuring realistic interactions.</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Portfolio End -->
+		
 
-                    <!-- Second Row with 3 Items -->
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portfolio-item">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/portfolio/p1.webp" alt="Space Shooter Game"/>
-                                    <div class="isotope-overlay">
-                                        <a href="#">Space Shooter Game</a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Space Shooter Game</h3>
-                                    <p>Endless space shooter game with increasing difficulty, built with Pygame.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portfolio-item">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/portfolio/p1.webp" alt="Snake Game"/>
-                                    <div class="isotope-overlay">
-                                        <a href="#">Snake Game</a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Snake Game</h3>
-                                    <p>Classic snake game created using Pygame with smooth gameplay.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portfolio-item">
-                                <div class="portfolio-image">
-                                    <img src="assets/images/portfolio/p1.webp" alt="Pong Game"/>
-                                    <div class="isotope-overlay">
-                                        <a href="#">Pong Game</a>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Pong Game</h3>
-                                    <p>Single-player version of Pong, built with Pygame, featuring realistic interactions.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Portfolio End -->
-
-<!--clients start -->
 <!-- Clients Section Start -->
 <section id="clients" class="clients">
     <div class="section-heading text-center">
@@ -670,31 +664,31 @@
         <div class="container">
             <div class="owl-carousel owl-theme" id="client-carousel">
                 <div class="item">
-                    <a href="#">
+                    <a href="https://github.com/PradeepBhatta" target="_blank">
                         <img src="assets/images/portfolio/p1.webp" alt="Project Image 1">
                     </a>
                     <p class="client-name">Client Name 1</p>
                 </div>
                 <div class="item">
-                    <a href="#">
+                    <a href="https://github.com/PradeepBhatta" target="_blank">
                         <img src="assets/images/portfolio/p1.webp" alt="Project Image 2">
                     </a>
                     <p class="client-name">Client Name 2</p>
                 </div>
                 <div class="item">
-                    <a href="#">
+                    <a href="https://github.com/PradeepBhatta" target="_blank">
                         <img src="assets/images/portfolio/p1.webp" alt="Project Image 3">
                     </a>
                     <p class="client-name">Client Name 3</p>
                 </div>
                 <div class="item">
-                    <a href="#">
+                    <a href="https://github.com/PradeepBhatta" target="_blank">
                         <img src="assets/images/portfolio/p1.webp" alt="Project Image 4">
                     </a>
                     <p class="client-name">Client Name 4</p>
                 </div>
                 <div class="item">
-                    <a href="#">
+                    <a href="https://github.com/PradeepBhatta" target="_blank">
                         <img src="assets/images/portfolio/p1.webp" alt="Project Image 5">
                     </a>
                     <p class="client-name">Client Name 5</p>
@@ -703,10 +697,9 @@
         </div>
     </div>
 </section>
-
 <!-- Clients Section End -->
 
-<!--clients end -->
+
 
 <section id="courses-certifications" class="courses-certifications">
     <div class="section-heading text-center">
@@ -714,62 +707,86 @@
     </div>
     <div class="container">
         <div class="courses-content">
-            <!-- First Row with 3 Items -->
             <div class="row">
+                <!-- First Certificate Row -->
                 <div class="col-md-4 col-sm-6">
-                    <div class="course-item" onclick="toggleDetails(this)">
-                        <h3>Machine Learning</h3>
+                    <div class="course-item">
+                        <div class="course-header" onclick="toggleDetails(this)">
+                            <h3>Machine Learning</h3>
+                            <span class="expand-arrow">&darr;</span>
+                        </div>
                         <div class="course-details">
                             <p>Completed an online course on Machine Learning, covering supervised and unsupervised learning techniques.</p>
                             <span>Coursera - Stanford University</span>
+                            <a href="path/to/machine-learning-certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="course-item" onclick="toggleDetails(this)">
-                        <h3>Data Science Specialization</h3>
+                    <div class="course-item">
+                        <div class="course-header" onclick="toggleDetails(this)">
+                            <h3>Data Science Specialization</h3>
+                            <span class="expand-arrow">&darr;</span>
+                        </div>
                         <div class="course-details">
                             <p>A comprehensive program in data science, focusing on data analysis, visualization, and R programming.</p>
                             <span>Coursera - Johns Hopkins University</span>
+                            <a href="path/to/data-science-certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="course-item" onclick="toggleDetails(this)">
-                        <h3>Python for Everybody</h3>
+                    <div class="course-item">
+                        <div class="course-header" onclick="toggleDetails(this)">
+                            <h3>Python for Everybody</h3>
+                            <span class="expand-arrow">&darr;</span>
+                        </div>
                         <div class="course-details">
                             <p>Learned Python programming fundamentals, data structures, and basic data manipulation.</p>
                             <span>Coursera - University of Michigan</span>
+                            <a href="path/to/python-everybody-certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Second Row with 3 Items -->
             <div class="row">
+                <!-- Second Certificate Row -->
                 <div class="col-md-4 col-sm-6">
-                    <div class="course-item" onclick="toggleDetails(this)">
-                        <h3>Deep Learning</h3>
+                    <div class="course-item">
+                        <div class="course-header" onclick="toggleDetails(this)">
+                            <h3>Deep Learning</h3>
+                            <span class="expand-arrow">&darr;</span>
+                        </div>
                         <div class="course-details">
                             <p>Studied the foundations of deep learning and neural networks, including practical applications.</p>
                             <span>Coursera - DeepLearning.ai</span>
+                            <a href="path/to/deep-learning-certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="course-item" onclick="toggleDetails(this)">
-                        <h3>Web Development</h3>
+                    <div class="course-item">
+                        <div class="course-header" onclick="toggleDetails(this)">
+                            <h3>Web Development</h3>
+                            <span class="expand-arrow">&darr;</span>
+                        </div>
                         <div class="course-details">
                             <p>Completed a full-stack web development course, focusing on both front-end and back-end technologies.</p>
                             <span>Udacity - Full Stack Web Developer Nanodegree</span>
+                            <a href="path/to/web-development-certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="course-item" onclick="toggleDetails(this)">
-                        <h3>AI for Everyone</h3>
+                    <div class="course-item">
+                        <div class="course-header" onclick="toggleDetails(this)">
+                            <h3>AI for Everyone</h3>
+                            <span class="expand-arrow">&darr;</span>
+                        </div>
                         <div class="course-details">
                             <p>An introduction to artificial intelligence, covering essential concepts and real-world applications.</p>
                             <span>Coursera - Andrew Ng</span>
+                            <a href="path/to/ai-for-everyone-certificate.pdf" target="_blank" class="view-certificate-btn">View Certificate</a>
                         </div>
                     </div>
                 </div>
