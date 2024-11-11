@@ -1,14 +1,3 @@
-/*==================================
-* Author        : "ThemeSine"
-* Template Name :  Browny  HTML Template
-* Version       : 1.0
-==================================== */
-
-/*==================================
-font-family: 'Poppins', sans-serif;
-==================================== */
-
-
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
 2.  Header
@@ -123,7 +112,6 @@ html, body {
 /*-------------------------------------
         2. Header
 --------------------------------------*/
-/* Header - Adjusted for Lehigh University Style */
 .top-area {
     position: relative;
     z-index: 9999;
@@ -142,7 +130,14 @@ nav.navbar.bootsnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Increased padding to make navbar taller */
+    padding: 20px 20px; /* Initial larger padding for tall navbar */
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smaller Navbar when Scrolled */
+nav.navbar.bootsnav.scrolled {
+    padding: 10px 20px; /* Reduced padding for smaller navbar */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
 }
 
 /* Navbar Brand (Logo and Text) - Centered with Navigation Links */
@@ -159,15 +154,20 @@ nav.navbar.bootsnav {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 20px 0; /* Increased padding to match increased navbar height */
+    padding: 20px 0;
 }
 
 /* Logo Image Styling */
 .nav-logo {
-    height: 40px; /* Adjust logo height as needed */
+    height: 40px; /* Initial height for larger navbar */
     width: auto;
-    margin-right: 8px; /* Adds space between logo and brand text */
+    margin-right: 8px;
     vertical-align: middle;
+    transition: height 0.3s ease;
+}
+
+.nav-logo.scrolled {
+    height: 30px; /* Smaller height when scrolled */
 }
 
 /* Navbar Links - Aligned with Logo */
@@ -187,15 +187,47 @@ nav.navbar.bootsnav ul.nav > li > a {
     font-size: 16px;
     font-weight: 400;
     color: #444;
-    padding: 25px 20px; /* Increased padding to match increased navbar height */
+    padding: 25px 20px;
     text-transform: uppercase;
     transition: color 0.3s;
 }
 
+/* Special Styling for the "Know Me More" Button */
+nav.navbar.bootsnav ul.nav > li > a.special-button {
+    background: linear-gradient(135deg, #502D0E, #6a3a22); /* Gradient for depth */
+    color: #FFFFFF !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover and Focus Effect */
+nav.navbar.bootsnav ul.nav > li > a.special-button:hover,
+nav.navbar.bootsnav ul.nav > li > a.special-button:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #6a3a22, #502D0E);
+    color: #FFFFFF !important;
+}
+
+/* Active State */
+nav.navbar.bootsnav ul.nav > li > a.special-button:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #502D0E;
+}
+
+/* Hover and Focus for Other Links */
 nav.navbar.bootsnav ul.nav > li > a:hover,
 nav.navbar.bootsnav ul.nav > li > a:focus,
 nav.navbar.bootsnav ul.nav > li.active > a {
-    color: #9b5d1e; /* Subtle hover color */
+    color: #4a2c2a;
 }
 
 /* Sticky Navbar - Consistent Colors */
@@ -221,7 +253,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
 }
 
 nav.navbar.bootsnav ul.nav > li.dropdown > ul.dropdown-menu {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Minimal shadow for dropdowns */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Scrollable Menu UI Design */
@@ -302,7 +334,7 @@ nav.navbar.bootsnav .navbar-toggle i {
     border-radius: 3px;
     text-transform: capitalize;
     color: #fff;
-    background: #ffe41e;
+    background: #502D0E;
     border:1px solid #ffe41e;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
     -webkit-transition: 0.3s linear; 
@@ -869,38 +901,33 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-align: center; /* Ensures client names are centered */
 }
 
+/* Course header styling */
 
-/*-------------------------------------
-        Courses and Certifications Styling
---------------------------------------*/
-.course-item {
-    background-color: #fff;
-    border-radius: 15px; /* Curved border */
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-    margin-bottom: 25px; /* Adjusted margin for spacing */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: box-shadow 0.3s ease-in-out;
-    transform: scale(0.95); /* Scale down to 0.95 of original size */
-    margin: 15px; /* Space between blocks */
+#courses-certifications {
+    padding-top: 50px; /* Space above the section */
+    padding-bottom: 50px; /* Space below the section */
+    border-top: 1px solid #ddd; /* Optional: line above the section */
+    border-bottom: 1px solid #ddd; /* Optional: line below the section */
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
     cursor: pointer;
 }
 
-/* Hover effect for the course items */
-.course-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-    transform: scale(1); /* Slightly enlarges on hover */
+/* Arrow styling */
+.expand-arrow {
+    font-size: 18px;
+    color: #502D0E;
+    transition: transform 0.3s ease;
 }
 
-/* Title styling */
-.course-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #502D0E;
-    padding: 15px 20px;
-    margin: 0;
-    text-transform: uppercase;
+/* Rotate arrow when expanded */
+.course-item.expanded .expand-arrow {
+    transform: rotate(180deg); /* Points upwards when expanded */
 }
 
 /* Course details hidden initially */
@@ -909,30 +936,22 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 14px;
     color: #555;
     padding: 15px 20px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
 }
 
-/* Display course details on hover */
-.course-item:hover .course-details {
-    display: block;
-    color: #999fb3;
+/* View Certificate button */
+.view-certificate-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #502D0E;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-/* Add a fade-in effect for details */
-.course-details {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.course-item:hover .course-details {
-    opacity: 1;
-}
-
-/* Responsive adjustments for course items */
-@media (max-width: 768px) {
-    .course-item {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Allow height to adjust automatically */
-    }
+.view-certificate-btn:hover {
+    color: #b08060;
+    text-decoration: underline;
 }
 
 
