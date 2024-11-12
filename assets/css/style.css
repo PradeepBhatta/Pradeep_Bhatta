@@ -1,3 +1,11 @@
+/*==================================
+* Author        : "ThemeSine"
+* Template Name :  Browny  HTML Template
+* Version       : 1.0
+==================================== */
+
+/*==================================
+font-fa
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
 2.  Header
@@ -130,13 +138,13 @@ nav.navbar.bootsnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px; /* Initial larger padding for tall navbar */
+    padding: 15px 20px; /* Reduced padding for smaller height */
     transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Smaller Navbar when Scrolled */
 nav.navbar.bootsnav.scrolled {
-    padding: 10px 20px; /* Reduced padding for smaller navbar */
+    padding: 8px 20px; /* Further reduced padding when scrolled */
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
 }
 
@@ -154,12 +162,12 @@ nav.navbar.bootsnav.scrolled {
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 /* Logo Image Styling */
 .nav-logo {
-    height: 40px; /* Initial height for larger navbar */
+    height: 35px; /* Smaller height for compact navbar */
     width: auto;
     margin-right: 8px;
     vertical-align: middle;
@@ -167,7 +175,7 @@ nav.navbar.bootsnav.scrolled {
 }
 
 .nav-logo.scrolled {
-    height: 30px; /* Smaller height when scrolled */
+    height: 28px; /* Smaller height when scrolled */
 }
 
 /* Navbar Links - Aligned with Logo */
@@ -184,10 +192,10 @@ nav.navbar.bootsnav ul.nav > li {
 }
 
 nav.navbar.bootsnav ul.nav > li > a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     color: #444;
-    padding: 25px 20px;
+    padding: 18px 15px; /* Adjusted padding to make the navbar more compact */
     text-transform: uppercase;
     transition: color 0.3s;
 }
@@ -290,16 +298,21 @@ nav.navbar.bootsnav .navbar-toggle i {
 /*-------------------------------------
         3.  Welcome-hero
 --------------------------------------*/
-.welcome-hero{
+.welcome-hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    position:relative;
-    background:url(../images/about/welcome-banner.JPG)no-repeat;
-    background-size:cover;
-    background-position: center;
-    height:890px;
+    position: relative;
+    background: url(../images/about/welcome-banner.JPG) no-repeat center center;
+    background-size: cover; /* Use 'contain' if you want to fit the whole image without cropping */
+    height: calc(100vh - 80px); /* Adjust based on navbar height */
+    min-height: 100vh;
+    width: 100%;
 }
+
+
+
+
 .welcome-hero:before{
     position:absolute;
     content: " ";
@@ -351,10 +364,10 @@ nav.navbar.bootsnav .navbar-toggle i {
 --------------------------------------*/
 /* About Section */
 .about {
-    padding: 50px 0 100px;
+    padding: 50px 0 50px;
 }
 .about-content {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 /* About Text */
@@ -467,7 +480,7 @@ nav.navbar.bootsnav .navbar-toggle i {
     padding-top:  50px;
 }
 .education-horizontal-timeline {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 /*.education-horizontal-timeline*/
@@ -506,8 +519,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .skills {
     
 }
-.skill-content{padding: 50px 0 80px;}
-.single-skill-content{padding-top: 100px;}
+.skill-content{padding: 50px 0 60px;}
+.single-skill-content{padding-top: 60px;}
 .section-heading h2 {
     font-size: 24px;
     font-weight: 600;
@@ -573,11 +586,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         7. Experience
 -------------------------------------*/
 .experience {
-    padding: 50px 0 100px;
+    padding: 50px 0 75px;
     border-top: 1px solid #e5ebf2;
 }
-.experience-content {padding-top: 100px;}
-.single-timeline-box {margin-bottom: 75px;}
+.experience-content {padding-top: 50px;}
+.single-timeline-box {margin-bottom: 50px;}
 
 /*experience-time*/
 .experience-time {
@@ -654,11 +667,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         8. Profiles
 --------------------------------------*/
 .profiles {
-    padding:  50px 0 100px;
+    padding:  50px 0 25px;
     border:  1px solid #e5ebf2;
 }
 
-.profiles-content {padding-top: 100px;}
+.profiles-content {padding-top: 25px;}
 .profiles-content .col-sm-3{padding:0;}
 .profile-txt {
     display: flex;
@@ -685,9 +698,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 16px;
 }
 .single-profile.profile-no-border{border-right:transparent;}
-.profile-border {
-    border-bottom: 1px solid #b2c1ce;
-}
+
 .single-profile-overlay{
     display:flex;
     align-items:center;
@@ -727,12 +738,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .single-profile:hover .profile-border {border:transparent;}
 
 .portfolio {
-    padding: 50px 0 100px;
+    padding: 75px 0 75px;
     border: 1px solid #e5ebf2;
 }
 
 .portfolio-content {
-    padding-top: 100px;
+    padding-top: 75px;
 }
 
 .portfolio-item {
@@ -1065,15 +1076,15 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     transition: .3s;
 }
 .hm-foot-icon ul li>a:hover{
-    color: #b636ff;
+    color: #502D0E;
 }/*hm-foot-icon*/
 
 .hm-footer-copyright p{
-    color: #888ea5;
+    color: #502D0E;
     text-transform: capitalize;
     padding: 38px 0;
 }
-.hm-footer-copyright p a {color: #888ea5;}
+.hm-footer-copyright p a {color: #502D0E;}
 /*===============================
     Scroll Top
 ===============================*/
@@ -1089,8 +1100,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 20px;
     cursor: pointer;
     color: #fff;
-    background:#b636ff;
-	border:1px solid #b636ff;
+    background:#502D0E;
+	border:1px solid #ffe41e;
 	border-radius:50%;
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 
