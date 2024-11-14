@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
+    <style>
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .rain {
+            position: absolute;
+            top: -10vh;
+            width: 2px;
+            height: 15vh;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+            animation: fall linear infinite;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #b636ff;
+        }
+
+        .content {
+            text-align: center;
+            color: #FFFFFF;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+        }
+
+        /* Mountain layers */
+        .mountain-range {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .mountain {
+            position: relative;
+            width: 200vw;
+            height: 40vh;
+            background: #ffffff;
+            clip-path: polygon(0 100%, 20% 70%, 40% 90%, 60% 60%, 80% 85%, 100% 50%, 100% 100%);
+        }
+
+        .mountain-foreground {
+            background: #6b1a9b;
+            height: 50vh;
+            clip-path: polygon(0 100%, 15% 80%, 35% 95%, 50% 70%, 70% 90%, 85% 60%, 100% 100%);
+            z-index: 2;
+        }
+
+        .mountain-background {
+            background: #a200ff;
+            height: 30vh;
+            clip-path: polygon(0 100%, 20% 80%, 40% 90%, 60% 65%, 85% 85%, 100% 60%, 100% 100%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="rain-container" class="relative w-full h-full overflow-hidden"></div>
+
+    <div class="mountain-range">
+        <div class="mountain mountain-background"></div>
+        <div class="mountain mountain-foreground"></div>
+    </div>
+
+    <div class="content">
+        <h1>Coming Soon</h1>
+        <p>This page is under construction. Stay tuned!</p>
+    </div>
+
+    <script>
+        function createRaindrop() {
+            const rainContainer = document.getElementById('rain-container');
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('rain');
+
+            raindrop.style.left = `${Math.random() * 100}vw`;
+            raindrop.style.animationDuration = `${Math.random() * 1 + 0.5}s`;
+
+            rainContainer.appendChild(raindrop);
+
+            setTimeout(() => {
+                raindrop.remove();
+            }, 1000);
+        }
+
+        function generateRain() {
+            setInterval(createRaindrop, 100);
+        }
+
+        generateRain();
+    </script>
+    
+</body>
+</html>
