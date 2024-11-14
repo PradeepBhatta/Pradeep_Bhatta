@@ -1,6 +1,12 @@
 $(document).ready(function() {
     "use strict";
     
+    /*==================================
+    * Author        : "ThemeSine"
+    * Template Name : Khanas HTML Template
+    * Version       : 1.0
+    ==================================== */
+    
     /*=========== TABLE OF CONTENTS ===========
     1. Scroll To Top 
     2. Smooth Scroll spy
@@ -34,13 +40,18 @@ $(document).ready(function() {
     });
 
     $('li.smooth-menu a').bind("click", function(event) {
-        event.preventDefault();
         var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top - 0
-        }, 1200, 'easeInOutExpo');
+        var href = anchor.attr('href');
+        
+        // Only prevent default if the link is for an internal section (starts with '#')
+        if (href.startsWith('#')) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: $(href).offset().top - 0
+            }, 1200, 'easeInOutExpo');
+        }
     });
-
+    
     $('body').scrollspy({
         target: '.navbar-collapse',
         offset: 0
